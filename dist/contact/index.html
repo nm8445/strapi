@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">INFT 3201</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/lab1/mainpage">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Lab 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/fastcars">Cars</a></li>
+                <li><a class="dropdown-item" href="/pagination">Pagination</a></li>
+                <li><a class="dropdown-item" href="/content">Content</a></li>
+                <li><a class="dropdown-item" href="/documentation">Documentation</a></li>
+                <li><a class="dropdown-item" href="/blog">Blogs</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container my-5">
+      
+
+
+<div id="messageArea"></div>
+
+<div class="row justify-content-lg-center g-3">
+
+    <form class="col-lg-6 col-md-10 col-sm-10">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Full Name</span>
+            <input id="fullName" name="fullName" type="text" class="form-control"
+                   aria-describedby="Full Name" aria-label="Full Name Input" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Contact Number</span>
+            <input id="contactNumber" name="contactNumber" type="tel" class="form-control"
+                   aria-describedby="Contact Number" aria-label="Contact Number Input" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input id="emailAddress" name="emailAddress" type="email" class="form-control"
+                   aria-describedby="Email Address" aria-label="Email Address Input" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Your Message</span>
+            <input id="message" name="message" class="form-control"
+                   aria-describedby="Message Area" aria-label="Message Area Input" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <input id="subscribeCheckbox" name="subscribeCheckbox" type="checkbox" class="form-check-input">
+            <label class="form-check-label" for="subscribeCheckbox">Subscribe to our contact list</label>
+        </div>
+
+        <button id="sendButton" type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Submit
+        </button>
+        <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-rotate-left"></i> Cancel
+        </button>
+    </form>
+
+   
+</div>
+
+    </div>
+    <footer class="text-center bg-dark">
+  <p class="name text-white">
+    &copy; <span id="currentYear"></span> Nathaniel Mais | 
+    <a href="/lab1/tac" class="text-white">Terms and Conditions</a>
+  </p>
+</footer>
+
+     <script>
+      window.onload = function() {
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = currentDate.toLocaleString('default', { month: 'long' });
+        const day = currentDate.getDate();
+
+        document.getElementById("currentYear").textContent = `${day} ${month} ${year}`;
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="/js/submitform.js"></script>
+  </body>
+</html>

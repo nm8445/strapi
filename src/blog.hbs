@@ -1,0 +1,16 @@
+---
+layout: layouts/default.hbs
+title: My Rad Website
+pagination:
+  data: blogs     
+  size: 1          # Display one post per page
+  alias: post      # Alias for the current post
+---
+
+<div>
+    <h2>Quantum Computing</h2>
+    <div>{{{ markdownToHTML post.Quantumcomputing }}}</div>
+
+    <h2>Artificial Intelligence</h2>
+    <div>{{{ markdownToHTML post.ai }}}</div>
+</div>

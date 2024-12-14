@@ -1,0 +1,10 @@
+---
+layout: layouts/default.hbs
+title: My Rad Website
+---
+
+<h1>Cars Gallery</h1>
+
+{{#each images}}
+  <img src="{{this.url}}" alt="{{this.alt}}">
+{{/each}}

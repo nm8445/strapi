@@ -1,0 +1,52 @@
+{
+   "data":[
+      {
+         "id":2,
+         "documentId":"vahf2m04q5w0cjbjdpkolhz9",
+         "Name":"Nathaniel Mais",
+         "Email":"njmais@outlook.com",
+         "Phone":"6474647161",
+         "createdAt":"2024-11-06T00:58:14.983Z",
+         "updatedAt":"2024-11-06T00:58:26.109Z",
+         "publishedAt":"2024-11-06T00:58:26.114Z"
+      },
+      {
+         "id":6,
+         "documentId":"k6o463kkmptxp7rw93i4dd7c",
+         "Name":"Jaden Parris",
+         "Email":"Jadenparris@jjk.com",
+         "Phone":"6473530000",
+         "createdAt":"2024-11-06T00:59:11.874Z",
+         "updatedAt":"2024-11-06T01:07:41.320Z",
+         "publishedAt":"2024-11-06T01:07:41.325Z"
+      },
+      {
+         "id":8,
+         "documentId":"vtglqd6v5etq3n00vcnssp4u",
+         "Name":"Samuel Jackson",
+         "Email":"samjack@outlook.com",
+         "Phone":"6473536161",
+         "createdAt":"2024-11-06T01:09:53.599Z",
+         "updatedAt":"2024-11-06T01:09:53.599Z",
+         "publishedAt":"2024-11-06T01:09:53.603Z"
+      },
+      {
+         "id":10,
+         "documentId":"g7q2v3gt1qxgoydzzpqltmc2",
+         "Name":"George George",
+         "Email":"george@gg.com",
+         "Phone":"6472928484",
+         "createdAt":"2024-11-06T01:10:41.042Z",
+         "updatedAt":"2024-11-06T01:10:41.042Z",
+         "publishedAt":"2024-11-06T01:10:41.046Z"
+      }
+   ],
+   "meta":{
+      "pagination":{
+         "page":1,
+         "pageSize":25,
+         "pageCount":1,
+         "total":4
+      }
+   }
+}

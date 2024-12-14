@@ -1,0 +1,24 @@
+---
+layout: layouts/default.hbs
+title: My Rad Website
+pagination:
+  data: grabmd     # Use the data from grabmd.js
+  size: 1          # Display one post per page
+  alias: post      # Alias for the current post
+---
+
+
+<h1>Documentation</h1>
+
+<div>
+    <div>{{{ markdownToHTML post.documentation }}}</div>
+</div>
+
+<nav>
+    {{#if pagination.previous}}
+        <a href="{{ pagination.previous.url }}">Previous</a>
+    {{/if}}
+    {{#if pagination.next}}
+        <a href="{{ pagination.next.url }}">Next</a>
+    {{/if}}
+</nav>

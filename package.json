@@ -1,0 +1,34 @@
+{
+  "name": "assignment-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve",
+    "start": "concurrently \"npm run start:strapi\" \"npm run wait-and-start-eleventy\"",
+    "start:strapi": "cd lab2-strapi && npm run develop",
+    "wait-and-start-eleventy": "wait-on http://localhost:1337 && npx eleventy --serve",
+    "start-api": "netlify-lambda serve functions"
+  },
+  "keywords": [],
+  "author": "Nathaniel Mais 100843860",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.1",
+    "@11ty/eleventy-plugin-handlebars": "^1.0.0",
+    "bootstrap": "^5.3.3",
+    "gray-matter": "^4.0.3",
+    "handlebars": "^4.7.8",
+    "markdown-it": "^14.1.0",
+    "marked": "^15.0.0",
+    "netlify-lambda": "^2.0.16",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "concurrently": "^9.1.0",
+    "wait-on": "^5.3.0"
+  }
+}

@@ -1,0 +1,19 @@
+---
+layout: layouts/default.hbs
+title: My Rad Website
+pagination:
+  data: grabmd     # Use the data from grabmd.js
+  size: 1          # Display one post per page
+  alias: post      # Alias for the current post
+---
+
+
+<div>
+    <h1>{{ title }}</h1>
+    <div>{{{ markdownToHTML post.deliverable1 }}}</div>
+    <div>{{{ markdownToHTML post.instructions }}}</div>
+    <div>{{{ markdownToHTML post.mainpage }}}</div>
+    <div>{{{ markdownToHTML post.tac }}}</div>
+    <div>{{{ markdownToHTML post.lab2 }}}</div>
+</div>
+

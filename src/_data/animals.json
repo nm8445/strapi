@@ -1,0 +1,29 @@
+[
+
+      {
+        "name": "Lion",
+        "species": "Panthera leo",
+        "age": 5,
+        "habitat": "Savannah"
+      },
+      {
+        "name": "Elephant",
+        "species": "Loxodonta africana",
+        "age": 10,
+        "habitat": "Grassland"
+      },
+      {
+        "name": "Penguin",
+        "species": "Aptenodytes forsteri",
+        "age": 3,
+        "habitat": "Antarctica"
+      },
+      {
+        "name": "Kangaroo",
+        "species": "Macropus rufus",
+        "age": 7,
+        "habitat": "Australian Outback"
+      }
+
+  ]
+  

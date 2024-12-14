@@ -1,0 +1,25 @@
+html, body {
+  height: 100%; /* Ensure the body takes the full height */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+}
+
+.container {
+  flex: 1; /* Allows the container to grow and fill available space */
+  padding: 20px; /* Optional: Add padding for visual appeal */
+}
+
+footer {
+  background-color: #2c313c; /* Footer background color */
+  padding: 10px; /* Adjust padding as needed */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width of the footer */
+}
+
+.name {
+  color: white; /* Text color for the name */
+}

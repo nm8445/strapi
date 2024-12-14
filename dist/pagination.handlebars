@@ -1,0 +1,53 @@
+---
+layout: layouts/default.mustache
+title: Animals
+pagination:
+  data: animals  
+  size: 1
+  alias: animals
+---
+
+<!-- Main content of the page -->
+<div class="container my-5">
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation">
+    <ul id="pagination" class="pagination justify-content-center mb-3">
+      <!-- Previous Button -->
+      {{#pagination.href.previous}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.previous}}" aria-label="Previous">
+            <span aria-hidden="true">&laquo; Previous</span>
+          </a>
+        </li>
+      {{/pagination.href.previous}}
+
+      <!-- Page Numbers -->
+      {{#pagination.pages}}
+        <li class="page-item {{#isCurrent}}active{{/isCurrent}}">
+          <a class="page-link" href="{{url}}">{{number}}</a>
+        </li>
+      {{/pagination.pages}}
+
+      <!-- Next Button -->
+      {{#pagination.href.next}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.next}}" aria-label="Next">
+            <span aria-hidden="true">Next &raquo;</span>
+          </a>
+        </li>
+      {{/pagination.href.next}}
+    </ul>
+  </nav>
+
+  <!-- Animal List -->
+  <div class="row justify-content-center">
+    <ol id="animal-list" class="list-group mb-3 col-md-6">
+      {{#pagination.items}} <!-- Loop through the paginated items -->
+        <li class="list-group-item">
+          <h5 class="mb-1">{{name}}</h5>
+          <small class="text-muted">Species: {{species}} | Age: {{age}} | Habitat: {{habitat}}</small>
+        </li>
+      {{/pagination.items}}
+    </ol>
+  </div>
+</div>

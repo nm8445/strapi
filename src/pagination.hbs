@@ -1,0 +1,53 @@
+---
+layout: layouts/default.hbs
+title: Animals
+pagination:
+  data: animals  
+  size: 1
+  alias: animals
+---
+
+<!-- Main content of the page -->
+<div class="container my-5">
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation">
+    <ul id="pagination" class="pagination justify-content-center mb-3">
+      <!-- Previous Button -->
+      {{#if pagination.href.previous}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.previous}}" aria-label="Previous">
+            <span aria-hidden="true">&laquo; Previous</span>
+          </a>
+        </li>
+      {{/if}}
+
+      <!-- Page Numbers -->
+      {{#each pagination.pages as |page|}}
+        <li class="page-item {{#if page.isCurrent}}active{{/if}}">
+          <a class="page-link" href="{{page.url}}">{{page.number}}</a>
+        </li>
+      {{/each}}
+
+      <!-- Next Button -->
+      {{#if pagination.href.next}}
+        <li class="page-item">
+          <a class="page-link" href="{{pagination.href.next}}" aria-label="Next">
+            <span aria-hidden="true">Next &raquo;</span>
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+
+  <!-- Animal List -->
+  <div class="row justify-content-center">
+    <ol id="animal-list" class="list-group mb-3 col-md-6">
+      {{#each pagination.items}} <!-- Loop through the paginated items -->
+        <li class="list-group-item">
+          <h5 class="mb-1">{{name}}</h5>
+          <small class="text-muted">Species: {{species}} | Age: {{age}} | Habitat: {{habitat}}</small>
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>
